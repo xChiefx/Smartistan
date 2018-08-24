@@ -1,0 +1,57 @@
+// 初始化
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure,{
+    margin:0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size: 16px;
+  font-weight: normal;
+}
+ul,ol,li {
+  list-style: none;
+}
+b,
+strong {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a,
+u {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+input {
+  outline: none;
+}
+html,body{
+    height: 100%;
+    position: relative;
+    background: #ededed;
+}
+// 价格上面的小圆点,参数2为中心颜色值;
+@mixin circle($color2) {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  border: 1px solid #eaeaea;
+  div{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: $color2;
+    margin: 0 auto;
+    margin-top: 3px;
+  }
+}
+
+

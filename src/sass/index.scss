@@ -1,0 +1,384 @@
+@import 'public';
+
+// header
+$headwidth:100%;
+$display:block;
+$conwidth:1220px;
+$borderRadius:10px;
+@mixin center {
+    margin: 0 auto;
+}
+// header
+#head{
+    width: 100%;
+    height: 100px;
+    background: #040404;
+    border-top: 1px solid #e1e1e2;
+    border-bottom: 1px solid #e1e1e2;
+    .head-con{
+        width: $conwidth;
+        height: $headwidth;
+        @include center;
+        .logo1{
+            padding-top: 30px;
+            float: left;
+            .logo{
+                width: 40px;
+                height: 42px;
+            }
+        }
+        .nav{
+            width: 903px;
+            height: $headwidth;
+            margin-left: 118px;
+            float: left;
+            li{
+                float: left;
+                padding-top: 44px;
+                height: 12px;
+                a{
+                    margin-right: 43px;
+                    font-size: 12px;
+                    color: #c8c8c8;
+                    line-height: 12px;
+                    &:hover {color: #ffffff}
+                }
+            }
+        }
+        .icon{
+            width: 159px;
+            height: 98px;
+            display: inline-block;
+            position: relative;
+            a:first-child{
+                width: 20px;
+                height: 20px;
+                display: $display;
+                font-size: 20px !important;
+                color: #999999 !important;
+                margin: 0 auto;
+                position: absolute;
+                left: 50px;
+                top: 40px;
+                .icon-wo{
+                    line-height: 20px !important;
+                }
+            }
+            a:nth-of-type(2){
+                display: $display;
+                width: 30px;
+                height: 20px;
+                font-size: 20px !important;
+                color: #999999 !important;
+                margin: 0 auto;
+                position: absolute;
+                right: 32px;
+                top: 39px;
+            }
+            .icon-num{
+                width: 20px;
+                height: 20px;
+                background:#9e9e9e;
+                border-radius: 10px;
+                border: 1px solid #4f4f4f;
+                position: absolute;
+                right: 12px;
+                top: 38px;
+                text-align: center;
+                line-height: 20px;
+                color: #ffffff;
+                font-size: 12px;
+            }
+            span:hover{
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+// search
+$searchheight:89px;
+#search{
+    width: $headwidth;
+    height: $searchheight;
+    background: #ededed;
+    position: relative;
+    .search-con{
+        width: $conwidth;
+        height: $searchheight;
+        @include center;
+        ul{
+            width: 158px;
+            height: $searchheight;
+            float: left;
+            li{
+                float: left;
+                margin-top: 40px;
+                a{
+                    font-size: 12px;
+                    color: #666666;
+                    &:hover{
+                        color: blue;
+                    }
+                }
+            }
+            .con1{
+                margin:40px 32px 0 9px
+            }
+        }
+        input{
+            width: 1009px;
+            height: 30px;
+            border: 1px solid #cccccc;
+            margin-left: 51px;
+            float: left;
+            margin-top: 30px;
+            border-radius: 15px;
+        }
+    }
+}
+// banner
+$width:1218px;
+#banner{
+    width: $headwidth;
+    height: 497px;
+    background: #ededed;
+    .banner-con{
+        width: $width;
+        height: $headwidth;
+        background: orange;
+        @include center;
+        position: relative;
+        border: 1px solid #dbdbdb;
+        border-radius: $borderRadius;
+        a{
+            display: block;
+            img{
+                display: none;
+                width: $width;
+                height: 497px;
+            }
+        }
+    }
+}
+// preview
+#preview{
+    width: $headwidth;
+    height: 202px;
+    background: #ededed;
+    margin-top: 25px;
+    .preview-con{
+        width: $width;
+        background: #f5f5f5;
+        height: 202px;
+        border: 1px solid #dbdbdb;
+        border-radius: $borderRadius;
+        @include center;
+        section{
+            float: left;
+            width: 304px;
+            height: $headwidth;
+            border-left: 1px solid #eeeeee;
+            &:hover{
+                box-shadow: 50px 50px 50px #ededed inset;
+            }
+            h2{
+                font-size: 16px;
+                color: #282828;
+                font-weight: 800;
+                text-align: center;
+                margin-top: 32px;
+                p{
+                    display: inline-block;
+                    width: 50px;
+                    height: 20px;
+                    background: #dc3b3d;
+                    color: #eff1f2;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 12px;
+                    border-radius: 5px;
+                }
+            }
+            h6{
+                font-size: 12px;
+                color: #858585;
+                text-align: center;
+                margin-top: 11px;
+            }
+            img{
+                width: 60%;
+                height: 122px;
+                @include center;
+            }
+        }
+        .preview-con1{
+            width: 303px;
+            border-left: 0;
+        }
+    }
+}
+// product
+#product{
+    width: $headwidth;
+    height: 489px;
+    margin-top: 25px;
+    .product-con{
+        width: $width;
+        height: $headwidth;
+        border: 1px solid #dbdbdb;
+        border-radius: $borderRadius;
+        @include center;
+        background: #ffffff;
+        .product-con1{
+            width: $headwidth;
+            height: 60px;
+            background: #fafafa;
+            border-bottom: 1px solid #e1e1e1;
+            border-radius: $borderRadius $borderRadius 0 0;
+            h1{
+                font-size: 18px;
+                line-height: 60px;
+                text-align: center;
+                color: #666666;
+                width: 157px;
+                height: 60px;
+                float: left;
+
+            }
+            div{
+                width: 92px;
+                height: 50px;
+                float: right;
+                padding-top: 10px;
+                :first-child{
+                    display: inline-block;;
+                    width: 40px;
+                    height: 40px;
+                    background: url('./../src/img/112.png') no-repeat center;
+                }
+                :last-child{
+                    display: inline-block;;
+                    width: 40px;
+                    height: 40px;
+                    background: url('./../src/img/111.png') no-repeat center;
+                }
+            }
+        }
+        dl{
+            float: left;
+            display: block;
+            width: 304px;
+            height: 428px;
+            border-left: 1px solid #efefef;
+            dt{
+                position: relative;
+                img{
+                    @include center;
+                }
+                p{
+                    width: 44px;
+                    height: 18px;
+                    text-align: center;
+                    line-height: 18px;
+                    color: #d03b34;
+                    font-size: 12px;
+                    border-radius: 9px;
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    background: #ffe7e5;
+                    border: 1px solid #f5a39d;
+                }
+            }
+            dd{
+                h2{
+                    font-size: 12px;
+                    color: #333333;
+                    text-align: center;
+                    line-height: 12px;
+                    font-weight: 900;
+                }
+                h3{
+                    font-size: 12px;
+                    color: #999999;
+                    text-align: center;
+                    line-height: 12px;
+                    margin-top: 18px;
+                }
+                .circle1{
+                    @include circle(#000000);
+                    margin: 17px 10px 0 132px;
+                    display: inline-block;
+                }
+                .circle2{
+                    @include circle(#cccccc);
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+                .circle3{
+                    @include circle(#000000);
+                    margin: 17px 10px 0 97px;
+                    display: inline-block;
+                }
+                .circle4{
+                    @include circle(#000000);
+                    margin: 17px 10px 0 121px;
+                    display: inline-block;
+                }
+                .circle5{
+                    @include circle(#000000);
+                    margin: 17px 10px 0 109px;
+                    display: inline-block;
+                }
+                h4{
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 16px;
+                    color: #d44d44;
+                    font-weight: 900;
+                    margin-top: 24px;
+                }
+            }
+        }
+        .product-con2{
+            width: 303px;
+            border-left: 0;
+        }
+    }
+}
+// show product
+#show{
+    width: $headwidth;
+    height: 857px;
+    .show-con{
+        width: $width;
+        height: $headwidth;
+        background: orange;
+        border-radius: $borderRadius;
+        border: 1px solid #dbdbdb;
+        @include center;
+        margin-top: 25px;
+        h6{
+            display: $display;
+            height: 60px;
+            width: $width - 25 px;
+            font-size: 18px;
+            color: #666666;
+            padding-left: 25px;
+            line-height: 60px;
+            background: #fafafa;
+            border-radius: $borderRadius $borderRadius 0 0;
+            border-bottom: 1px solid #dbdbdb;
+
+        }
+        .show-con1{
+            width: 608px;
+            height: 428px;
+            display: inline-block;
+            img{
+                width: $headwidth;
+                height: $headwidth;
+            }
+        }
+    }
+}
