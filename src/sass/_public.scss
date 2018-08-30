@@ -53,5 +53,189 @@ html,body{
     margin-top: 3px;
   }
 }
+// 下面五大板块样式相同,设为宏;
+@mixin product-show {
+    width: $headwidth;
+    height: 918px;
+    .show-con{
+        width: $width;
+        height: $headwidth;
+        border-radius: $borderRadius;
+        border: 1px solid #dbdbdb;
+        @include center;
+        margin-top: 25px;
+        h6{
+            display: $display;
+            height: 60px;
+            width: $width - 25 px;
+            font-size: 18px;
+            color: #666666;
+            padding-left: 25px;
+            line-height: 60px;
+            background: #fafafa;
+            border-radius: $borderRadius $borderRadius 0 0;
+            border-bottom: 1px solid #dbdbdb;
 
-
+        }
+        .show-con1{
+            width: 608px;
+            height: 428px;
+            float:left;
+            img{
+                width: $headwidth;
+                height: $headwidth;
+            }
+        }
+        dl{
+            width: 304px;
+            height: 428px;
+            float:left;
+            background: #ffffff;;
+            border-left:1px solid #efefef;
+            border-top: 1px solid #efefef;
+            //@include shadow;
+            dt{
+                position: relative;
+                margin-bottom: 284px;
+                img{
+                    margin-left: 10px;
+                    height: 284px;
+                    position: absolute;
+                }
+            }
+            dd{
+                h2{
+                    font-size: 12px;
+                    color: #333333;
+                    line-height: 12px;
+                    text-align: center;
+                    margin-bottom: 18px;
+                    font-weight: 900;
+                }
+                h3{
+                    font-size: 12px;
+                    color: #999999;
+                    text-align: center;
+                    line-height: 12px;
+                    margin-bottom: 18px;
+                }
+                .show-circle{
+                    @include circle(#f0f0f0);
+                    @include center;
+                }
+                h4{
+                    font-size: 14px;
+                    color: #d44d44;
+                    font-weight: 900;
+                    text-align: center;
+                    margin-top: 24px;
+                    position: relative;
+                    section{
+                        width: 189px;
+                        height: 27px;
+                        background: #ffffff;
+                        position: absolute;
+                        left: 42px;
+                        bottom: 0;
+                        display: none;
+                        p{
+                            width: 88px;
+                            height: 25px;
+                            border: 1px solid #e1e1e1;
+                            border-radius: $borderRadius;
+                            font-size: 12px;
+                            color: #646464;
+                            line-height: 25px;
+                            text-align: center;
+                            //display: none;
+                            background: #fdfdfd;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0px;
+                            cursor: pointer;
+                        }
+                        div{
+                            width: 88px;
+                            height: 25px;
+                            border: 1px solid #5c81e3;
+                            border-radius: $borderRadius;
+                            font-size: 12px;
+                            color: #feffff;
+                            line-height: 25px;
+                            text-align: center;
+                            //display: none;
+                            background: #6c94e4;
+                            position: absolute;
+                            right: 0px;
+                            bottom: 0px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .show-con4{
+            width:303px;
+            border-left:0;
+            border-radius: 0 0 0 $borderRadius;
+        }
+        .show-con2,.show-con3{
+            border-top: 0;
+        }
+        .show-con7{
+          border-radius: 0 0 $borderRadius 0;
+        }
+    }
+}
+// 右上角{买降}标志
+@mixin state {
+        width: 44px;
+        height: 18px;
+        text-align: center;
+        line-height: 18px;
+        color: #d03b34;
+        font-size: 12px;
+        border-radius: 9px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: #ffe7e5;
+        border: 1px solid #f5a39d;
+}
+// 右上角{直降}标志；
+@mixin state1 {
+  width: 44px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  color: #a06e37;
+  font-size: 12px;
+  border-radius: 9px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #fffbdf;
+  border: 1px solid #d8b886;
+}
+// 鼠标滑过改变内阴影;
+@mixin shadow {
+    &:hover{
+        box-shadow: 10px 5px 10px 10px #ededed inset;
+    }
+}
+// 选择颜色变化;
+@mixin plus {
+    width: 98px;
+    height: 28px;
+    border: 1px solid #e1e1e1;
+    border-radius: $borderRadius;
+    font-size: 12px;
+    color: #646464;
+    line-height: 28px;
+    text-align: center;
+    display: none;
+    background: #fdfdfd;
+    position: absolute;
+    left: 102px;
+    bottom: 0px;
+}
